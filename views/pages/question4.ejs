@@ -1,21 +1,18 @@
-<!DOCTYPE html>
-<head>
-    <title>Node: Workshop 1</title>
-    <link rel="stylesheet" href="./css/styles.css">
-</head>
+<%- include('../partials/questions/doctype') %>
 <body>
-    <header>
-        <h1>Node: Workshop 1</h1>
-    </header>
+    <%- include('../partials/questions/header') %>
     <div class='main'>
         <h2>Part 1</h2>
         <div class='content'>
             <%- include('../partials/questions/4') %>
             <div class='box answer'>
                 <h3>Answer</h3>
-                <!-- render answer here -->
+                <p><%- best[0] %></p>
+                <p><%- best[1] %></p>
+                <p><%- best[2] %> </p>
                 
             </div>
         </div>
+        <%- include('../partials/questions/linksToPages') %>
     </div>
 </body>

@@ -34,7 +34,18 @@ const q3 = (req, res) => {
         favoriteBeverage: 'Duff Beer'
     };
 
-    res.render('pages/question3');
+    const dom = {
+        imageUrl: 'https://vignette.wikia.nocookie.net/simpsons/images/0/02/Homer_Simpson_2006.png',
+        name: 'Dominique Provencher',
+        dob: 'September 27 1983',
+        profession: 'Low life',
+        favoriteFood: 'Donuts',
+        favoriteBeverage: 'Duff Beer'
+    };
+
+    res.render('pages/question3', {dom: dom, homer: homer});
+    // res.render('pages/question3', {homer: homer});
+
 }
 // -----------------------------------------------
 
@@ -44,7 +55,10 @@ const q3 = (req, res) => {
 const q4 = (req, res) => {
     const popularGirlNames = ['Olivia', 'Ruby', 'Emily', 'Grace', 'Jessica'];
 
-    res.render('pages/question4');
+    best = popularGirlNames.filter((name,idx) => idx <= 2);
+    
+
+    res.render('pages/question4', {popularGirlNames: best} );
 }
 // -----------------------------------------------
 
@@ -54,7 +68,10 @@ const q4 = (req, res) => {
 const q5 = (req, res) => {
     const popularGirlNames = ['Olivia', 'Ruby', 'Emily', 'Grace', 'Jessica'];
 
-    res.render('pages/question5');
+   
+
+
+    res.render('pages/question5', {popularGirlNames: popularGirlNames});
 }
 // -----------------------------------------------
 
